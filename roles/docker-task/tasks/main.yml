@@ -1,0 +1,5 @@
+- name: Pull default Docker image
+  community.docker.docker_image:
+    name: ubuntu:18.04
+    source: pull
+    tags: dipull

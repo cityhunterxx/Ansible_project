@@ -1,0 +1,14 @@
+---
+- name: Playbook
+  hosts: webservers
+  become: true
+  vars:
+    ansible_python_interpreter: /usr/bin/python3 #ansible specify python interpreter
+    container_count: 4
+    default_container_name: docker
+    default_container_image: ubuntu
+    default_container_command: sleep 1
+  roles: 
+    - apache
+    - docker-install
+    - docker-task
