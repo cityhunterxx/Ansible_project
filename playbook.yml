@@ -2,6 +2,7 @@
 - name: Playbook
   hosts: webservers
   become: true
+  #gather_facts: no
   # vars_files:
   #   - docker-login-var.yml
   vars:
@@ -15,4 +16,5 @@
     - docker-install
     - docker-task
     - docker-login
+    - grafana
     

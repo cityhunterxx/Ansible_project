@@ -3,7 +3,7 @@
     name: aptitude
     state: latest
     update_cache: true
-    tags: di
+  tags: di
 
 - name: Install required system packages
   apt:
@@ -17,25 +17,25 @@
       - python3-setuptools
     state: latest
     update_cache: true
-    tags: di
+  tags: di
 
 - name: Add Docker GPG apt Key
   apt_key:
     url: https://download.docker.com/linux/ubuntu/gpg
     state: present
-    tags: di
+  tags: di
 - name: Add Docker Repository
   apt_repository:
     repo: deb https://download.docker.com/linux/ubuntu focal stable
     state: present
-    tags: di
+  tags: di
 
 - name: Update apt and install docker-ce
   apt:
     name: "{{ item }}"
     state: latest
     update_cache: true
-    tags: di
+  tags: di
   with_items:
     - docker-ce 
     - docker-ce-cli 
@@ -45,11 +45,17 @@
 - name: Install Docker Module for Python
   pip:
     name: docker
-    tags: di
+  tags: di
+
+- name: Install docker packages
+  become: yes
+  pip:
+    name: 
+      - docker-compose
 
 - name: adding existing user to group docker
   user:
     name: cityhunter
     groups: docker
     append: yes
-    tags: di
+  tags: di

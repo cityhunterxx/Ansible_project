@@ -1,0 +1,15 @@
+---
+- name: Create or update a Grafana user
+  tags: grafana
+  community.grafana.grafana_user:
+    url: "http://grafana.city.local"
+    url_username: cityhunter
+    url_password: d5RyDpxhlm73n
+    name: "{{ item.name }}"
+    email: "{{ item.email }}"
+    login: "{{ item.login }}"
+    password: "{{ item.password }}"
+    is_admin: false
+    state: present
+  loop: 
+    - {{ grafana_users }}

@@ -2,4 +2,24 @@
   community.docker.docker_image:
     name: ubuntu:18.04
     source: pull
-    tags: dipull
+  tags: dipull
+
+- name: Stop service apache2, if started
+  service:
+    name: apache2
+    state: stopped
+  tags: start-apps
+
+- name: deploy nginx & grafana servers
+  community.docker.docker_compose:
+    project_src: /home/cityhunter/Desktop/DevOps/Docker-tutorial/{{ item }}
+    files:
+    - docker-compose.yaml
+    pull: yes #will pull & docker up -d (even if it exists he will try to pull it)
+  with_items:
+    - Nginx-proxy
+    - Monitoring/grafana
+    - Monitoring/prometheus
+  tags: start-apps
+
+

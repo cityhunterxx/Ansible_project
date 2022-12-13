@@ -1,0 +1,6 @@
+grafana_users: 
+  - name: "Bouby"
+    email: batman@gotham.city
+    login: batman
+    password: robin
+    is_admin: false
