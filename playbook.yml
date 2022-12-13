@@ -2,6 +2,8 @@
 - name: Playbook
   hosts: webservers
   become: true
+  # vars_files:
+  #   - docker-login-var.yml
   vars:
     ansible_python_interpreter: /usr/bin/python3 #ansible specify python interpreter
     container_count: 4
@@ -12,4 +14,5 @@
     - apache
     - docker-install
     - docker-task
+    - docker-login
     
