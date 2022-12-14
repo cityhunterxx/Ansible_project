@@ -4,3 +4,4 @@ grafana_users:
     login: batman
     password: robin
     is_admin: false
+    
