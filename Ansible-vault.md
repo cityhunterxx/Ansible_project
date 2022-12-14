@@ -55,5 +55,7 @@ In this case you will have to insert the vault password.
 ⇒ It is possible to store your vault password somewhere to use it while running ansible-playbook :
 `" $ nano ~/.targetfile_vault"`
 within the editor ⇒ just **insert your passworld** and **save** then **exit**
+
 #ansible-playbook command with automated vault password completion :
- `" $ ansible-playbook -i inventory_name.ini playbook_name.yml --ask-become-pass --vault-password-file ~/.targetfile_vault"` # here put the path to your stored vault password 
+ `" $ ansible-playbook -i inventory_name.ini playbook_name.yml --ask-become-pass --vault-password-file ~/.targetfile_vault"` 
+ #here put the path to your stored vault password 
