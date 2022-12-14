@@ -1,7 +1,25 @@
 grafana_users: 
-  - name: "Bouby"
-    email: batman@gotham.city
-    login: batman
-    password: robin
+  - name: "ibrahimovic"
+    email: ibrahimovic@gotham.city
+    login: ibrahimovic
+    password: ibrahimovic
+    is_admin: false
+
+  - name: "ronaldo"
+    email: ronaldo@gotham.city
+    login: ronaldo
+    password: ronaldoJr
+    is_admin: false
+
+  - name: "Neymar"
+    email: naymar@gotham.city
+    login: neymar
+    password: neymarJr
+    is_admin: false
+
+  - name: "kaladze"
+    email: kaladze@gotham.city
+    login: kaladze
+    password: kaladzeJr
     is_admin: false
     

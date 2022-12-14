@@ -11,5 +11,4 @@
     password: "{{ item.password }}"
     is_admin: false
     state: present
-  loop: 
-    - "{{ grafana_users }}"
+  loop: "{{ grafana_users }}"
