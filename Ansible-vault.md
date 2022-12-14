@@ -11,34 +11,35 @@ If you’d like to not expose what **variables** you are using, you can keep an 
 ## Create an ansible-vault :
 #Creation command :
 `" $ ansible-vault create targetfile.yml"`
-		⇒ New password        #Select a password for your vault
-		⇒ Confirm password
+		
+⇒ New password        #Select a password for your vault
+⇒ Confirm password
 		
 If you : `" $ cat targetfile.yml"` You will see that the data within the Yaml file is encrypted.
 
 ## View inside the encrypted file with ansible-vault :
 #Visualization command :
 `" $ ansible-vault view targetfile.yml"`
-	⇒ Insert your vault password for this file to see its content.
+⇒ Insert your vault password for this file to see its content.
 
 ## Edit/change the ansible-vault password :
 #Edit key command :
 `" $ ansible-vault rekey targetfile.yml"`
-		⇒ Insert your current vault password for this file 
-		⇒ New password        
-		⇒ Confirm password
+⇒ Insert your current vault password for this file 
+⇒ New password        
+⇒ Confirm password
 
 ## Encrypt a file via ansible-vault :
 #Encryption command : 
 `" $ ansible-vault encrypt targetfile.yml"`
-		⇒ New password        #Select a password for your vault
-		⇒ Confirm password
+⇒ New password        #Select a password for your vault
+⇒ Confirm password
 If you : `" $ cat targetfile.yml"` You will see that the data within the Yaml file is encrypted.
 
 ##  Decrypt a file via ansible-vault :
 #Decryption command : 
 `" $ ansible-vault decrypt targetfile.yml"`
-	⇒ Insert your vault password for this file to see its content
+⇒ Insert your vault password for this file to see its content
 If you : `" $ cat targetfile.yml"` You will be able to visualize or modify the data within the Yaml file.
 
 ## Edit the content of an encrypted file via ansible-vault :
