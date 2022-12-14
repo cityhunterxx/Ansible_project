@@ -1,14 +1,37 @@
 ---
+- name: load variables
+  include_vars : 
+    file: grafana_credentials.yml
+
 - name: Create or update a Grafana user
   tags: grafana
+ # include_vars: grafana_credentials.yml
   community.grafana.grafana_user:
     url: "http://grafana.city.local"
-    url_username: cityhunter
-    url_password: d5RyDpxhlm73n
+    url_username: "{{ grafana_url_username }}" 
+    url_password: "{{ grafana_url_password }}"
     name: "{{ item.name }}"
     email: "{{ item.email }}"
     login: "{{ item.login }}"
-    password: "{{ item.password }}"
-    is_admin: false
+    #password: "{{ item.password }}"
+    #is_admin: false
     state: present
   loop: "{{ grafana_users }}"
+
+- name: Delete a Grafana user(s)
+  #include_vars: grafana_credentials.yml 
+  tags: grafana
+  community.grafana.grafana_user:
+    url: "http://grafana.city.local"
+    url_username: "{{ grafana_url_username }}" 
+    url_password: "{{ grafana_url_password }}" 
+    login: "{{ item.login }}"
+    state: absent
+  loop: "{{ grafana_deleted_users }}"
+
+
+
+
+
+
+  

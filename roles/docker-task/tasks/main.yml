@@ -15,7 +15,7 @@
     project_src: /home/cityhunter/Desktop/DevOps/Docker-tutorial/{{ item }} #He will go the files containing the docker-compose.yaml of the containers // Use the var item cause we will be dragging multiple ones
     files:
     - docker-compose.yaml
-    pull: yes #will pull & docker up -d (even if it exists he will try to pull it)
+    pull: no  #will pull & docker up -d (even if it exists he will try to pull it)
   with_items:
     - Nginx-proxy #To start nginx , make sure to stop apache with ansible before docker compose up le nginx et c'est dans les deux sens !
     - portainer
