@@ -2,4 +2,4 @@
   community.docker.docker_login:
     username: "{{ username }}"
     password: "{{ passwd | password_hosts ( sha256 ) }}"
-    tags: dlin
+  tags: dlin

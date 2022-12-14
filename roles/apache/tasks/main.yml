@@ -2,11 +2,11 @@
   apt:
     name: apache2
     state: latest
-    tags: ap2
+  tags: ap2
 - name: ensure apache is running
   service:
     name: apache2
     state: started
-    tags: ap2
+  tags: ap2
 
   

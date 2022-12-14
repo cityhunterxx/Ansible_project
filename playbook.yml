@@ -3,8 +3,6 @@
   hosts: webservers
   become: true
   #gather_facts: no
-  # vars_files:
-  #   - docker-login-var.yml
   vars:
     ansible_python_interpreter: /usr/bin/python3 #ansible specify python interpreter
     container_count: 4

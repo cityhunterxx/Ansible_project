@@ -12,14 +12,19 @@
 
 - name: deploy nginx & grafana servers
   community.docker.docker_compose:
-    project_src: /home/cityhunter/Desktop/DevOps/Docker-tutorial/{{ item }}
+    project_src: /home/cityhunter/Desktop/DevOps/Docker-tutorial/{{ item }} #He will go the files containing the docker-compose.yaml of the containers // Use the var item cause we will be dragging multiple ones
     files:
     - docker-compose.yaml
     pull: yes #will pull & docker up -d (even if it exists he will try to pull it)
   with_items:
     - Nginx-proxy
+    - portainer
     - Monitoring/grafana
     - Monitoring/prometheus
+    - Monitoring/cadvisor
+    - Monitoring/heimdall
+    - Monitoring/node-exporter
+    - Monitoring/uptime_kuma
   tags: start-apps
 
 

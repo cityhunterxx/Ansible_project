@@ -52,6 +52,7 @@
   pip:
     name: 
       - docker-compose
+  tags: di
 
 - name: adding existing user to group docker
   user:
