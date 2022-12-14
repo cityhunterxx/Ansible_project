@@ -12,4 +12,4 @@
     is_admin: false
     state: present
   loop: 
-    - {{ grafana_users }}
+    - "{{ grafana_users }}"
