@@ -35,11 +35,11 @@ If you : `" $ cat targetfile.yml"` You will see that the data within the Yaml fi
 		⇒ Confirm password  
 If you : `" $ cat targetfile.yml"` You will see that the data within the Yaml file is encrypted.
 
-##  Decrypt a file via ansible-vault :
-#Decryption command : 
-`" $ ansible-vault decrypt targetfile.yml"`  
-	⇒ Insert your vault password for this file to see its content
-If you : `" $ cat targetfile.yml"` You will be able to visualize or modify the data within the Yaml file.
+##  Decrypt a file via ansible-vault :  
+#Decryption command :   
+`" $ ansible-vault decrypt targetfile.yml"`    
+	⇒ Insert your vault password for this file to see its content  
+If you : `" $ cat targetfile.yml"` You will be able to visualize or modify the data within the Yaml file.  
 
 ## Edit the content of an encrypted file via ansible-vault :
 #Edit key command :
