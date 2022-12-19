@@ -12,8 +12,8 @@
     name: "{{ item.name }}"
     email: "{{ item.email }}"
     login: "{{ item.login }}"
-    #password: "{{ item.password }}"
-    #is_admin: false
+    password: "{{ item.password }}"
+    is_admin: false
     state: present
   loop: "{{ grafana_users }}"
 

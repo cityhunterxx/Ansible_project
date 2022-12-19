@@ -25,6 +25,7 @@
     - Monitoring/heimdall
     - Monitoring/node-exporter
     - Monitoring/uptime_kuma
+    - Monitoring/blackbox
   tags: start-apps
 
 
