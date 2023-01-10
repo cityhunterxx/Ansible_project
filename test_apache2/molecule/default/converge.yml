@@ -1,4 +1,0 @@
----
-- name: Converge
-  hosts: all
-- ansible.builtin.import_playbook: /home/cityhunter/Desktop/DevOps/ansible/playbook.yml
