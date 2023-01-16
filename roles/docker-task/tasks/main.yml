@@ -4,11 +4,11 @@
     source: pull
   tags: dipull
 
-- name: Stop service apache2, if started
-  service:
-    name: apache2
-    state: stopped
-  tags: start-apps
+# - name: Stop service apache2, if started
+#   service:
+#     name: apache2
+#     state: stopped
+#   tags: start-apps
 
 - name: deploy nginx & grafana servers & others
   community.docker.docker_compose:
