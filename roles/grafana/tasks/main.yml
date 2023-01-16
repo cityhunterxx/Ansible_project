@@ -6,7 +6,8 @@
 - name: Create or update a Grafana user
   tags: grafana
   community.grafana.grafana_user:
-    url: "http://grafana.city.local"
+    # url: "http://grafana.city.local"
+    url: "https://grafana.devops-hunter.com"
     url_username: "{{ grafana_url_username }}" 
     url_password: "{{ grafana_url_password }}"
     name: "{{ item.name }}"
