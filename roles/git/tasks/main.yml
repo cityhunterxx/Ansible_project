@@ -1,0 +1,9 @@
+- name: git pull
+  tags: git-pull
+  git:
+    repo: 'git@github.com:cityhunterxx/Docker_project.git'
+    dest: /root/Devops-project
+    version: main
+    accept_hostkey: yes #To be checked !
+  become: no
+
