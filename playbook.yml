@@ -1,6 +1,7 @@
 ---
 - name: Playbook
-  hosts: all
+  hosts: dgCntrldroplet
+#    - digitalocean Controller droplet
   become: true
   gather_facts: no
   # vars_files: 

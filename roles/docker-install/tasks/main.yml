@@ -48,7 +48,7 @@
   tags: di
 
 - name: Install docker packages
-  become: yes
+  become: true
   pip:
     name: 
       - docker-compose
